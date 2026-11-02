@@ -44,7 +44,7 @@ export function ExtraSections() {
                 n: "02",
                 icon: BookOpen,
                 title: "Make time for a chapter",
-                text: "Sign in, borrow an available copy, and enjoy fourteen days of reading.",
+                text: "Sign in, borrow an available copy, and enjoy seven days of reading.",
               },
               {
                 n: "03",

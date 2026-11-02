@@ -1474,7 +1474,9 @@ h2 {
 
 @media (max-width: 580px) {
   .header-actions .login-link {
-    display: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
   }
   .header-actions {
     gap: 5px;
@@ -1494,5 +1496,27 @@ h2 {
   }
   .hero-copy h1 {
     font-size: 36px;
+  }
+}
+.library-wordmark {
+  display: grid;
+  line-height: 1;
+  gap: 4px;
+}
+.library-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+}
+@media (max-width: 380px) {
+  .header-inner {
+    padding-inline: 10px;
+    gap: 4px;
+  }
+  .header-actions {
+    gap: 3px;
+  }
+  .header-actions .btn-circle {
+    padding-inline: 0;
   }
 }

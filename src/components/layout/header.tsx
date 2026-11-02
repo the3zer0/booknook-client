@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { BookOpen, Menu, X, LogOut, UserRound, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
@@ -10,7 +10,7 @@ export function Header() {
   const [menu, setMenu] = useState(false);
   const [dark, setDark] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
+
   useEffect(() => {
     setDark(document.documentElement.dataset.theme === "pataghor-dark");
   }, []);
@@ -30,8 +30,7 @@ export function Header() {
     if (error) toast.error(error.message);
     else {
       toast.success("You have logged out.");
-      router.push("/");
-      router.refresh();
+      window.location.replace("/");
     }
   }
   const links = [
@@ -48,11 +47,13 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="Pataghor home">
+        <Link className="brand" href="/" aria-label="Pataghor BookNook home">
           <span className="brand-mark">
             <BookOpen size={22} />
           </span>
-          Pataghor<span className="brand-dot">.</span>
+          <span className="library-wordmark">
+            Pataghor<span className="library-label">BookNook</span>
+          </span>
         </Link>
         <nav
           className={`main-nav ${menu ? "is-open" : ""}`}

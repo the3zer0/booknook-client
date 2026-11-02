@@ -79,7 +79,7 @@ export function BookDetails({ id }: { id: string }) {
               {book.totalCopies} copies available
             </p>
             <p>
-              <CalendarDays size={18} /> Borrow for 14 days
+              <CalendarDays size={18} /> Borrow for 7 days
             </p>
           </div>
           <button
@@ -101,7 +101,7 @@ export function BookDetails({ id }: { id: string }) {
         busy={busy}
       >
         <p>
-          Borrow <strong>{book.title}</strong> for 14 days. You can return it
+          Borrow <strong>{book.title}</strong> for 7 days. You can return it
           any time from My Borrows.
         </p>
         <form onSubmit={borrow} className="form-stack">

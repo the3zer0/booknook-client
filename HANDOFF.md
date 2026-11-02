@@ -6,7 +6,7 @@ The selected brand is Pataghor and the selected design is Open Shelf. The assign
 
 Next.js App Router, DaisyUI, shared navigation/footer, responsive Home with three Swiper slides, MongoDB latest-six shelf, category browsing, title/author search, and two static sections. Auth includes email registration, password rules, email login, protected pages with return destinations, profile, session persistence and logout. The Google provider and authenticated imgbb upload handler are implemented and await service keys.
 
-Book create/edit/delete and confirmation dialogs, private book details, borrow/return, available copy counts, and owner-only management are implemented. Express has the eight required routes. Borrow/return use MongoDB transactions and a unique active-borrow index. The chosen loan duration is 14 days. Local database setup and an idempotent six-book seed are in the server scripts.
+Book create/edit/delete and confirmation dialogs, private book details, borrow/return, available copy counts, and owner-only management are implemented. Express has the eight required routes. Borrow/return use MongoDB transactions and a unique active-borrow index. The chosen loan duration is 7 days. Local database setup and an idempotent six-book seed are in the server scripts.
 
 ## Verification
 
@@ -21,3 +21,9 @@ Browser checks covered registration, email login, private book details, borrowin
 5. At the end of every work session update this handoff and tell the user what was completed, what was tested and what remains. Keep actual keys only in ignored local env files or the host secret manager.
 
 To resume in a new chat, share both repository links and ask the assistant to read HANDOFF.md and continue with the first open step.
+
+## Submission alignment verified on 2026-11-02
+
+The navbar displays Pataghor and BookNook together. Guest Login and Register fit at 320px, the footer includes the X logo, and new loans use seven days to match the demonstration. Tested in a fresh Edge session against the local production build: six arrivals, mobile controls without horizontal overflow, guest View Details redirects to login, successful login opens the intended book, and logout from that private book returns Home. All 11 server tests passed including the seven-day due date across a month boundary.
+
+Still required: real Google OAuth and imgbb credentials and their end-to-end checks, a hosted MongoDB replica set, production client/API deployment, incognito verification and a verified live URL in README. The user is setting up provider accounts. Never commit provider credentials.

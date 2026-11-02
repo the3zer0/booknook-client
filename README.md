@@ -5,7 +5,7 @@ Pataghor is a community lending library built with Next.js App Router, TypeScrip
 - Discover the latest six additions or browse all books by category, title and author.
 - Register with email, sign in and resume the book page you originally opened.
 - Share books with covers and manage titles, descriptions and copy counts on your own shelf.
-- Borrow available books for fourteen days and see their due dates in My Borrows.
+- Borrow available books for seven days and see their due dates in My Borrows.
 - Return a book to release its copy for another reader.
 - Switch between light and dark themes on desktop and mobile.
 

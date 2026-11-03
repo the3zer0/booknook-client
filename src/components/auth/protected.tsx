@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth/client";
 import { Loading, ErrorState } from "@/components/ui/status";
 export function Protected({ children }: { children: React.ReactNode }) {
   const { data, isPending, error, refetch } = authClient.useSession();

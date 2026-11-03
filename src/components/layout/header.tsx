@@ -1,10 +1,11 @@
 "use client";
+import { site } from "@/config/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpen, Menu, X, LogOut, UserRound, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth/client";
 export function Header() {
   const { data: session, isPending } = authClient.useSession();
   const [menu, setMenu] = useState(false);
@@ -52,7 +53,7 @@ export function Header() {
             <BookOpen size={22} />
           </span>
           <span className="library-wordmark">
-            Pataghor<span className="library-label">BookNook</span>
+            {site.name}<span className="library-label">{site.assignmentName}</span>
           </span>
         </Link>
         <nav

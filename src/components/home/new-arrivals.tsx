@@ -1,11 +1,12 @@
 "use client";
+import { site } from "@/config/site";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useBooks } from "@/hooks/use-books";
 import { BookCard } from "@/components/books/book-card";
 import { EmptyState, ErrorState, Loading } from "@/components/ui/status";
 export function NewArrivals() {
-  const { books, error, loading, reload } = useBooks("?limit=6");
+  const { books, error, loading, reload } = useBooks(`?limit=${site.latestBooks}`);
   return (
     <section className="section container" id="new-arrivals">
       <div className="section-heading">

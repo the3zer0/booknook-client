@@ -4,8 +4,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { BookOpen, ArrowUpRight, Eye, EyeOff } from "lucide-react";
 import { toast } from "sonner";
-import { authClient } from "@/lib/auth-client";
-import { errorMessage, passwordError, safeReturnPath } from "@/lib/utils";
+import { authClient } from "@/lib/auth/client";
+import { passwordError } from "@/lib/validations/password";
+import { errorMessage, safeReturnPath } from "@/lib/utils";
 
 export function AuthForm({ mode }: { mode: "login" | "register" }) {
   const register = mode === "register";

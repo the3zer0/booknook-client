@@ -27,3 +27,7 @@ To resume in a new chat, share both repository links and ask the assistant to re
 The navbar displays Pataghor and BookNook together. Guest Login and Register fit at 320px, the footer includes the X logo, and new loans use seven days to match the demonstration. Tested in a fresh Edge session against the local production build: six arrivals, mobile controls without horizontal overflow, guest View Details redirects to login, successful login opens the intended book, and logout from that private book returns Home. All 11 server tests passed including the seven-day due date across a month boundary.
 
 Still required: real Google OAuth and imgbb credentials and their end-to-end checks, a hosted MongoDB replica set, production client/API deployment, incognito verification and a verified live URL in README. The user is setting up provider accounts. Never commit provider credentials.
+
+## 2026-11-03 restructuring checkpoint
+
+Client API/auth/validation/types/config and Express routes/controllers/database/validation are separated. Public catalog privacy, required JWT expiry and redirect filtering were tightened. Both npm ci runs, client typecheck/build and 12 server tests passed. Edge checked Home and header at five viewport widths, theme, 404, registration/login, private refresh, create/edit/delete with an upload response fixture, borrow/return and logout. Real Google OAuth, imgbb upload and production deployment remain unverified. Start with docs/ASSIGNMENT_CHECKLIST.md and docs/DEPLOYMENT.md.

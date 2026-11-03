@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import type { Book } from "@/lib/types";
+import type { Book } from "@/types";
 export function BookCard({ book }: { book: Book }) {
   return (
     <article className="book-card">

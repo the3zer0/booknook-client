@@ -1,9 +1,11 @@
+import "server-only";
+import { site } from "@/config/site";
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { jwt } from "better-auth/plugins";
 import { APIError, createAuthMiddleware } from "better-auth/api";
 import { MongoClient } from "mongodb";
-import { passwordError } from "./utils";
+import { passwordError } from "../validations/password";
 
 function createAuth() {
   if (!process.env.MONGODB_URI || !process.env.BETTER_AUTH_SECRET)
@@ -13,7 +15,7 @@ function createAuth() {
   });
   const baseURL = process.env.BETTER_AUTH_URL || "http://localhost:3000";
   return betterAuth({
-    appName: "Pataghor",
+    appName: site.name,
     baseURL,
     secret: process.env.BETTER_AUTH_SECRET,
     database: mongodbAdapter(client.db(process.env.MONGODB_DB || "pataghor"), {

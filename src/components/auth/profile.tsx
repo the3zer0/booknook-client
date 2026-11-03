@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { UserRound } from "lucide-react";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth/client";
 export function Profile() {
   const { data } = authClient.useSession();
   if (!data) return null;

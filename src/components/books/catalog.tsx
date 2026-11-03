@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Search } from "lucide-react";
-import { categories } from "@/lib/types";
+import { categories } from "@/types";
 import { useBooks } from "@/hooks/use-books";
 import { BookCard } from "./book-card";
 import { EmptyState, ErrorState, Loading } from "@/components/ui/status";

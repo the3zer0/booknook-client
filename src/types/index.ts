@@ -15,9 +15,9 @@ export type Book = {
   description: string;
   totalCopies: number;
   availableCopies: number;
-  userId: string;
+  userId?: string;
   userName: string;
-  userEmail: string;
+  userEmail?: string;
   createdAt: string;
 };
 export type BookInput = Pick<

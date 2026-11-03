@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { UploadCloud, ArrowUpRight } from "lucide-react";
 import { toast } from "sonner";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth/client";
 import { api } from "@/lib/api";
-import { categories, type Book, type BookInput } from "@/lib/types";
+import { categories, type Book, type BookInput } from "@/types";
 import { errorMessage } from "@/lib/utils";
 
 export function BookForm({

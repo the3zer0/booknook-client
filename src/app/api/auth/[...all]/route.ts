@@ -1,4 +1,4 @@
-import { getAuth } from "@/lib/auth";
+import { getAuth } from "@/lib/auth/server";
 export const runtime = "nodejs";
 async function handler(request: Request) {
   if (!process.env.MONGODB_URI || !process.env.BETTER_AUTH_SECRET) {

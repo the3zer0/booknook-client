@@ -1,4 +1,4 @@
-import { authClient } from "./auth-client";
+import { authClient } from "../auth/client";
 const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 export async function api<T>(
   path: string,

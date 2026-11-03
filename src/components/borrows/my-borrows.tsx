@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 import { api } from "@/lib/api";
-import type { Borrow } from "@/lib/types";
+import type { Borrow } from "@/types";
 import { errorMessage, formatDate } from "@/lib/utils";
 import { EmptyState, ErrorState, Loading } from "@/components/ui/status";
 import { Modal } from "@/components/ui/modal";

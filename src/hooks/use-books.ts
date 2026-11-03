@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { errorMessage } from "@/lib/utils";
-import type { Book } from "@/lib/types";
+import type { Book } from "@/types";
 export function useBooks(query = "", authenticated = false) {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);

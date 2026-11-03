@@ -1,4 +1,4 @@
-import { getAuth } from "@/lib/auth";
+import { getAuth } from "@/lib/auth/server";
 export const runtime = "nodejs";
 export async function POST(request: Request) {
   if (

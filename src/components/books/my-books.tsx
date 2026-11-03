@@ -5,7 +5,7 @@ import { Pencil, Trash2, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { useBooks } from "@/hooks/use-books";
 import { api } from "@/lib/api";
-import type { Book } from "@/lib/types";
+import type { Book } from "@/types";
 import { errorMessage } from "@/lib/utils";
 import { EmptyState, ErrorState, Loading } from "@/components/ui/status";
 import { Modal } from "@/components/ui/modal";

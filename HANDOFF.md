@@ -31,3 +31,7 @@ Still required: real Google OAuth and imgbb credentials and their end-to-end che
 ## 2026-11-03 restructuring checkpoint
 
 Client API/auth/validation/types/config and Express routes/controllers/database/validation are separated. Public catalog privacy, required JWT expiry and redirect filtering were tightened. Both npm ci runs, client typecheck/build and 12 server tests passed. Edge checked Home and header at five viewport widths, theme, 404, registration/login, private refresh, create/edit/delete with an upload response fixture, borrow/return and logout. Real Google OAuth, imgbb upload and production deployment remain unverified. Start with docs/ASSIGNMENT_CHECKLIST.md and docs/DEPLOYMENT.md.
+
+## Real cover upload verified
+
+The local production build now has a working imgbb configuration. In Edge a generated JPEG uploaded through /api/upload (200); the hosted i.ibb.co image rendered in My Books. The test book was edited and deleted and both changes were verified after refresh. No provider response was substituted. Only the local book was deleted; the generated cover was uploaded to imgbb. Next: configure Google OAuth, set production secrets (including IMGBB_API_KEY), deploy, verify incognito and record the live URL.

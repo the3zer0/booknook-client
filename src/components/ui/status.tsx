@@ -1,11 +1,11 @@
 import { BookOpen, RotateCw } from "lucide-react";
 export function Loading({
-  label = "Loading your library…",
+  label = "Loading your libraryâ€¦",
 }: {
   label?: string;
 }) {
   return (
-    <div className="status" role="status">
+    <div className="library-status" role="status">
       <span className="loading loading-spinner loading-md" />
       <p>{label}</p>
     </div>
@@ -19,7 +19,7 @@ export function EmptyState({
   description: string;
 }) {
   return (
-    <div className="status">
+    <div className="library-status">
       <BookOpen size={32} strokeWidth={1.4} />
       <h3>{title}</h3>
       <p>{description}</p>
@@ -34,7 +34,7 @@ export function ErrorState({
   retry?: () => void;
 }) {
   return (
-    <div className="status" role="alert">
+    <div className="library-status" role="alert">
       <p>{message}</p>
       {retry && (
         <button className="btn btn-outline" onClick={retry}>

@@ -35,3 +35,7 @@ Client API/auth/validation/types/config and Express routes/controllers/database/
 ## Real cover upload verified
 
 The local production build now has a working imgbb configuration. In Edge a generated JPEG uploaded through /api/upload (200); the hosted i.ibb.co image rendered in My Books. The test book was edited and deleted and both changes were verified after refresh. No provider response was substituted. Only the local book was deleted; the generated cover was uploaded to imgbb. Next: configure Google OAuth, set production secrets (including IMGBB_API_KEY), deploy, verify incognito and record the live URL.
+
+## Local origin troubleshooting
+
+Current workstation uses http://localhost:3001 for Next and http://localhost:5001 for Express. Local auth base URL, API CORS and JWT issuer match. Restart Next after changing its auth base URL. Edge verified six catalog cards and the real Google button returned HTTP 200 with the callback http://localhost:3001/api/auth/callback/google. Full Google account consent and session completion still need user verification. The shared empty/loading/error component uses a project-specific CSS class to avoid DaisyUI status-dot sizing.

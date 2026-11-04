@@ -71,3 +71,6 @@ Current workstation uses http://localhost:3001 for Next and http://localhost:500
 - Temporary test books, borrows, sessions and both QA accounts cleaned up.
 - REMAINING: Google login reaches Google but fails redirect_uri_mismatch. Existing OAuth web client must have Authorized redirect URI https://booknook-client-os8h.vercel.app/api/auth/callback/google and origin https://booknook-client-os8h.vercel.app. Current IAB Google account cannot access the existing Cloud project; user has been given exact settings and asked to reply saved. Do not call fully submission-ready until Google login is retested.
 - Full checklist: docs/ASSIGNMENT-VERIFICATION.md. No changes made in unrelated Fitlog workspace.
+
+## 2026-11-04 — Google production login verified
+User saved the production OAuth origin and callback. Retested live through Google account selection and basic profile/email consent: callback returned to the BookNook homepage with authenticated account menu and Add Book/My Books/My Borrows navigation. redirect_uri_mismatch is resolved. Earlier remaining-Google-blocker notes are superseded. No known blocker remains from the audited checklist.

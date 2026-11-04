@@ -70,15 +70,11 @@
 :root {
   --muted-text: #64746c;
   --hero-bg: #edf2eb;
-  --hero-blue: #edf2f5;
-  --hero-peach: #f5eee8;
   --art-bg: #dce7d8;
 }
 [data-theme="pataghor-dark"] {
   --muted-text: #afbeb4;
   --hero-bg: #283b30;
-  --hero-blue: #283844;
-  --hero-peach: #42342b;
   --art-bg: #3a5141;
 }
 * {
@@ -202,10 +198,7 @@ h3 {
   place-items: center;
   color: var(--color-primary);
 }
-.brand-dot {
-  color: var(--color-accent);
-  margin-left: -9px;
-}
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -289,12 +282,7 @@ h3 {
   min-height: 470px;
   overflow: hidden;
 }
-.hero-panel.sky {
-  background: var(--hero-blue);
-}
-.hero-panel.peach {
-  background: var(--hero-peach);
-}
+
 .hero-copy {
   padding: 52px 0 56px 54px;
   position: relative;
@@ -365,19 +353,7 @@ h3 {
   background: var(--art-bg);
   opacity: 0.75;
 }
-.orbit-two {
-  width: 355px;
-  height: 355px;
-  border: 1px solid var(--color-primary);
-  opacity: 0.14;
-}
-.art-spark {
-  position: absolute;
-  top: 50px;
-  right: 62px;
-  font-size: 38px;
-  color: var(--color-accent);
-}
+
 .art-caption {
   position: absolute;
   bottom: 27px;
@@ -1117,13 +1093,7 @@ h2 {
     width: 245px;
     height: 245px;
   }
-  .orbit-two {
-    width: 285px;
-    height: 285px;
-  }
-  .art-spark {
-    right: 35px;
-  }
+
   .art-caption {
     right: 28px;
   }
@@ -1190,10 +1160,7 @@ h2 {
     width: 200px;
     height: 200px;
   }
-  .orbit-two {
-    width: 235px;
-    height: 235px;
-  }
+
   .art-caption {
     font-size: 14px;
     bottom: 60px;
@@ -1278,14 +1245,7 @@ h2 {
     width: 215px;
     height: 215px;
   }
-  .orbit-two {
-    width: 245px;
-    height: 245px;
-  }
-  .art-spark {
-    right: 55px;
-    top: 35px;
-  }
+
   .art-caption {
     right: 22px;
     bottom: 33px;
@@ -1503,11 +1463,7 @@ h2 {
   line-height: 1;
   gap: 4px;
 }
-.library-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-}
+
 @media (max-width: 380px) {
   .header-inner {
     padding-inline: 10px;
@@ -1521,7 +1477,6 @@ h2 {
   }
 }
 
-/* Reading Room: warm paper, bookish headings and a quiet arched display. */
 .hero-copy h1,
 .section-heading h2,
 .brand {
@@ -1535,18 +1490,12 @@ h2 {
   background: transparent;
   border-radius: 0;
 }
-.hero-panel.sky,
-.hero-panel.peach {
-  background: transparent;
-}
+
 .hero-art .orbit-one {
   border-radius: 48% 48% 0 0;
   height: 330px;
 }
-.hero-art .orbit-two,
-.hero-art .art-spark {
-  display: none;
-}
+
 .hero-art img {
   object-fit: contain;
   transform: rotate(5deg);

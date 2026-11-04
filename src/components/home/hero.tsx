@@ -19,7 +19,6 @@ const slides = [
     image: "/covers/garden.jpg",
     caption: "For your slow Sunday",
     bookTitle: "The Secret Garden by Frances Hodgson Burnett",
-    color: "sage",
   },
   {
     tag: "CURIOSITY LOOKS GOOD ON YOU",
@@ -34,7 +33,6 @@ const slides = [
     image: "/covers/cosmos.jpg",
     caption: "For your curious side",
     bookTitle: "The Hobbit by J. R. R. Tolkien",
-    color: "sky",
   },
   {
     tag: "GOOD STORIES KEEP MOVING",
@@ -49,7 +47,6 @@ const slides = [
     image: "/covers/pride.jpg",
     caption: "For the love of stories",
     bookTitle: "Pride and Prejudice by Jane Austen",
-    color: "peach",
   },
 ];
 export function Hero() {
@@ -65,7 +62,7 @@ export function Hero() {
         <>
           {slides.map((slide) => (
             <SwiperSlide key={slide.tag}>
-              <div className={`hero-panel ${slide.color}`}>
+              <div className="hero-panel">
                 <div className="hero-copy">
                   <p className="eyebrow">{slide.tag}</p>
                   <h1>{slide.title}</h1>
@@ -80,8 +77,6 @@ export function Hero() {
                 </div>
                 <div className="hero-art">
                   <div className="orbit orbit-one" />
-                  <div className="orbit orbit-two" />
-                  <span className="art-spark">✳</span>
                   <img
                     src={slide.image}
                     alt={slide.bookTitle}

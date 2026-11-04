@@ -10,14 +10,15 @@ const slides = [
     tag: "A LITTLE SPACE FOR BIG IDEAS",
     title: (
       <>
-        Less scrolling.
+        A little quiet.
         <br />
-        <span>More good books.</span>
+        <span>A good book.</span>
       </>
     ),
     text: "Discover a new favourite, borrow a little adventure, and share the stories you love. Your next chapter is waiting.",
-    image: "/covers/garden.svg",
+    image: "/covers/garden.jpg",
     caption: "For your slow Sunday",
+    bookTitle: "The Secret Garden by Frances Hodgson Burnett",
     color: "sage",
   },
   {
@@ -30,8 +31,9 @@ const slides = [
       </>
     ),
     text: "From the smallest wonders to the biggest questions, find books that make you see the world a little differently.",
-    image: "/covers/cosmos.svg",
+    image: "/covers/cosmos.jpg",
     caption: "For your curious side",
+    bookTitle: "The Hobbit by J. R. R. Tolkien",
     color: "sky",
   },
   {
@@ -44,8 +46,9 @@ const slides = [
       </>
     ),
     text: "Make a little room on your shelf. Add a book to the library and give another reader a story to remember.",
-    image: "/covers/pride.svg",
+    image: "/covers/pride.jpg",
     caption: "For the love of stories",
+    bookTitle: "Pride and Prejudice by Jane Austen",
     color: "peach",
   },
 ];
@@ -81,7 +84,7 @@ export function Hero() {
                   <span className="art-spark">✳</span>
                   <img
                     src={slide.image}
-                    alt="Illustrative book cover"
+                    alt={slide.bookTitle}
                     width={205}
                     height={290}
                   />

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -30,6 +30,12 @@ export function Footer() {
           </div>
           <div>
             <h3>Say hello</h3>
+            <a href="mailto:hello@booknook.example">
+              <Mail size={14} /> hello@booknook.example
+            </a>
+            <p className="contact-note">
+              Demo contact · use GitHub Issues for support.
+            </p>
             <a
               href="https://github.com/the3zer0/booknook-client/issues"
               target="_blank"

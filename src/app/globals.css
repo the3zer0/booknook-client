@@ -6,8 +6,8 @@
   name: "pataghor";
   default: true;
   color-scheme: light;
-  --color-base-100: #ffffff;
-  --color-base-200: #f6f7f6;
+  --color-base-100: #faf8f2;
+  --color-base-200: #eeeee5;
   --color-base-300: #e3e8e5;
   --color-base-content: #263d37;
   --color-primary: #284d42;
@@ -1519,4 +1519,43 @@ h2 {
   .header-actions .btn-circle {
     padding-inline: 0;
   }
+}
+
+/* Reading Room: warm paper, bookish headings and a quiet arched display. */
+.hero-copy h1,
+.section-heading h2,
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.hero-copy h1 {
+  font-weight: 400;
+  letter-spacing: -1.8px;
+}
+.hero-panel {
+  background: transparent;
+  border-radius: 0;
+}
+.hero-panel.sky,
+.hero-panel.peach {
+  background: transparent;
+}
+.hero-art .orbit-one {
+  border-radius: 48% 48% 0 0;
+  height: 330px;
+}
+.hero-art .orbit-two,
+.hero-art .art-spark {
+  display: none;
+}
+.hero-art img {
+  object-fit: contain;
+  transform: rotate(5deg);
+}
+.book-art img {
+  object-fit: contain;
+}
+.site-footer .contact-note {
+  font-size: 11px;
+  margin-top: 8px;
+  max-width: 230px;
 }

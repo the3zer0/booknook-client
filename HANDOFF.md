@@ -39,3 +39,35 @@ The local production build now has a working imgbb configuration. In Edge a gene
 ## Local origin troubleshooting
 
 Current workstation uses http://localhost:3001 for Next and http://localhost:5001 for Express. Local auth base URL, API CORS and JWT issuer match. Restart Next after changing its auth base URL. Edge verified six catalog cards and the real Google button returned HTTP 200 with the callback http://localhost:3001/api/auth/callback/google. Full Google account consent and session completion still need user verification. The shared empty/loading/error component uses a project-specific CSS class to avoid DaisyUI status-dot sizing.
+
+## November 4 deployment handoff
+- Public branding is BookNook. Custom SVG logo, favicon, Framer Motion reveals and card hover are pushed.
+- Latest client commit: 5bce2f7. Latest server commit: 147384d.
+- Atlas Project 0 / Cluster0 database pataghor has six seed books. Contributor labels and guide authors were renamed to BookNook through the Atlas connector.
+- Render workspace My Workspace (tea-d31m1tqdbo4c739nk4u0) was explicitly approved.
+- Created free Singapore web service booknook-api, ID srv-dblavc5g1s2s73e69db0.
+- API URL: https://booknook-api-8xuw.onrender.com (NOT healthy yet).
+- Initial deploy dep-dblavctg1s2s73e69fcg failed because MONGODB_URI is missing. User was asked to set it privately on Render.
+- Render environment has NODE_VERSION=22, MONGODB_DB=pataghor and JWT_AUDIENCE=pataghor-api. CLIENT_URL and JWT_ISSUER must become the final frontend origin.
+- Vercel browser session is logged out. Connector setup was opened, but no Vercel tool is available yet.
+- Local Atlas connection currently fails even though the Atlas connector works. Local end-to-end auth and catalog cannot yet be reverified.
+- Typecheck/build passed after animation changes. Local browser confirmed header logo and BookNook branding. Cover branding and loading-text encoding were subsequently fixed.
+- Remaining: Render secret and network access, Vercel deployment/environment, Google production callback, final live tests and README live URL. Do not report submission ready until these pass.
+
+### Render API verified live
+- Added user-provided Render outbound CIDRs 74.220.52.0/24 and 74.220.60.0/24 to Atlas Project 0.
+- Redeploy dep-dblb3h8ae00c73bnnm30 serves GET /books?limit=6 with HTTP 200 and six BookNook-labelled books. Guest book details returns 401.
+- API https://booknook-api-8xuw.onrender.com is reachable. Next: deploy frontend to Vercel, configure its secrets and Google callback, set Render CLIENT_URL/JWT_ISSUER to the frontend origin, and verify authenticated flows.
+
+
+## 2026-11-04 — Reading Room and production verification
+- Frontend: https://booknook-client-os8h.vercel.app; API: https://booknook-api-8xuw.onrender.com.
+- Client code commits: 5a26895 (Reading Room, real covers, sample contact), bcba413 (auth-page cover). Server: 2a72af1 (real-book seed).
+- Six live Atlas seed books now use real titles/authors/JPEG covers: Pride and Prejudice, The Secret Garden, The Hobbit, 1984, To Kill a Mockingbird, The Great Gatsby. IDs, timestamps and stock preserved. Cover source ISBNs in docs/cover-sources.md.
+- User approved sample footer contact: hello@booknook.example, visibly marked Demo contact. Real support remains GitHub Issues.
+- User explicitly approved Atlas 0.0.0.0/0 network access for Vercel dynamic egress. Added to Project 0. This fixed production registration HTTP 500. Database credentials remain required.
+- Production build/typecheck and all 12 backend tests pass. Live HTTP tests pass registration, email login, session, JWT, imgbb upload, add/edit/delete, My Books, borrow to zero stock, duplicate rejection, My Borrows, return/stock restore and logout.
+- Live browser checks pass guest details-to-login, register-to-login, return-to-book after login, private-page refresh/session persistence, borrow/return modal flow and logout-to-home. Six covers load. Tested mobile no horizontal overflow.
+- Temporary test books, borrows, sessions and both QA accounts cleaned up.
+- REMAINING: Google login reaches Google but fails redirect_uri_mismatch. Existing OAuth web client must have Authorized redirect URI https://booknook-client-os8h.vercel.app/api/auth/callback/google and origin https://booknook-client-os8h.vercel.app. Current IAB Google account cannot access the existing Cloud project; user has been given exact settings and asked to reply saved. Do not call fully submission-ready until Google login is retested.
+- Full checklist: docs/ASSIGNMENT-VERIFICATION.md. No changes made in unrelated Fitlog workspace.

@@ -15,10 +15,10 @@ Clone the client and server into sibling folders named booknook-client and bookn
 
 Open [BookNook locally](http://localhost:3000). Live website: [BookNook](https://booknook-client-os8h.vercel.app).
 
-[Server repository](https://github.com/the3zer0/booknook-server) · [Project handoff](HANDOFF.md)
+[Server repository](https://github.com/the3zer0/booknook-server)
 
 ## Configuration and deployment
 
 The stack includes Next.js 16, React 19, TypeScript, Tailwind CSS 4, DaisyUI, Better Auth, MongoDB, Swiper, Framer Motion and Sonner. Local development reads .env.local. See .env.example for variable names. Run npm run typecheck and npm run build to verify the client.
 
-[Architecture](docs/ARCHITECTURE.md) · [Assignment checklist](docs/ASSIGNMENT_CHECKLIST.md) · [Production deployment and environment setup](docs/DEPLOYMENT.md)
+[Production deployment and environment setup](docs/DEPLOYMENT.md)

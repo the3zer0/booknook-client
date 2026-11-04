@@ -1,7 +1,0 @@
-# Pre-refactor audit
-
-The two clean repositories matched the previous handoff. The supplied BookNook assignment text and video clarification are the requirements baseline. All requested page routes, eight business endpoints, authentication, copy accounting, private collections and owner checks already existed. The local tests covered duplicate loans, concurrent last-copy requests, double returns and owner restrictions. Provider credentials and a verified production URL were absent.
-
-Findings: the public catalog selected whole MongoDB documents including reader emails and internal ownership IDs. JWT verification checked expiry when present but did not require an exp claim. Redirect filtering relied on string prefixes, which missed browser normalization of embedded control characters. Auth middleware tests replaced signature verification with a stub. Next auth configuration lacked an explicit server-only boundary. The flat mixed validation module and combined route registry made these responsibilities harder to locate.
-
-Move shared types, client API access, auth configuration and password validation into named modules. Split Express routes, Mongo connection, validation and error utilities. Keep the eight URLs, success payloads used by the UI, seven-day transactions, indexes, route groups, layout markup, CSS, artwork and package stack intact. Google OAuth and real cover upload require provider configuration. Public deployment and incognito verification remain open.

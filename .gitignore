@@ -8,3 +8,7 @@ coverage/
 *.log
 
 next-env.d.ts
+
+# Local development instructions and notes
+AGENTS.md
+HANDOFF.md

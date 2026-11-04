@@ -101,8 +101,8 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
           talking about.
         </p>
         <img
-          src="/covers/pride.svg"
-          alt="Illustrated Pride and Prejudice cover"
+          src="/covers/pride.jpg"
+          alt="Pride and Prejudice by Jane Austen"
           width={155}
           height={220}
         />

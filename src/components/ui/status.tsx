@@ -1,6 +1,6 @@
 import { BookOpen, RotateCw } from "lucide-react";
 export function Loading({
-  label = "Loading your libraryâ€¦",
+  label = "Loading your library...",
 }: {
   label?: string;
 }) {

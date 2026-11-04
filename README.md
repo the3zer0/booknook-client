@@ -13,7 +13,7 @@ BookNook is a community lending library built with Next.js App Router, TypeScrip
 
 Clone the client and server into sibling folders named booknook-client and booknook-server. Use Node 22 or later and run npm ci in both folders. In the server folder, run npm run db:local and leave it running. It creates the database configuration and a random local auth secret on first use. In another server terminal run npm run seed once, then npm start. In the client folder run npm run dev.
 
-Open [BookNook locally](http://localhost:3000). The public deployment URL is pending.
+Open [BookNook locally](http://localhost:3000). Live website: [BookNook](https://booknook-client-os8h.vercel.app).
 
 [Server repository](https://github.com/the3zer0/booknook-server) · [Project handoff](HANDOFF.md)
 

@@ -2,7 +2,7 @@
 import { site } from "@/config/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Menu, X, LogOut, UserRound, Moon, Sun } from "lucide-react";
+import { Menu, X, LogOut, UserRound, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth/client";
@@ -48,13 +48,11 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="Pataghor BookNook home">
+        <Link className="brand" href="/" aria-label="BookNook home">
           <span className="brand-mark">
-            <BookOpen size={22} />
+            <img src="/booknook-logo.svg" alt="" width={36} height={36} />
           </span>
-          <span className="library-wordmark">
-            {site.name}<span className="library-label">{site.assignmentName}</span>
-          </span>
+          <span className="library-wordmark">{site.name}</span>
         </Link>
         <nav
           className={`main-nav ${menu ? "is-open" : ""}`}

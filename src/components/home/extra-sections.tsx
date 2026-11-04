@@ -29,7 +29,7 @@ export function ExtraSections() {
             <p>
               More reading, less fuss.
               <br />
-              Here’s how Pataghor works.
+              Here’s how BookNook works.
             </p>
           </div>
           <div className="steps-grid">

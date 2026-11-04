@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: { default: "Pataghor | Your next chapter", template: "Pataghor | %s" },
+  title: { default: "BookNook | Your next chapter", template: "BookNook | %s" },
   description:
     "Discover, borrow and share books in your community. A little space for your next chapter.",
 };

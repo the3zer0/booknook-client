@@ -1,1 +1,5 @@
-export const site = { name: "Pataghor", assignmentName: "BookNook", latestBooks: 6 } as const;
+export const site = {
+  name: "BookNook",
+  assignmentName: "BookNook",
+  latestBooks: 6,
+} as const;

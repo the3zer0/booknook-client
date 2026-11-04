@@ -44,7 +44,7 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
       toast.success(
         register
           ? "Account created. Log in to start reading."
-          : "Welcome back to Pataghor.",
+          : "Welcome back to BookNook.",
       );
       router.push(
         register ? `/login?returnTo=${encodeURIComponent(returnTo)}` : returnTo,

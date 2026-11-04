@@ -1,10 +1,17 @@
 "use client";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Book } from "@/types";
 export function BookCard({ book }: { book: Book }) {
+  const reducedMotion = useReducedMotion();
   return (
-    <article className="book-card">
+    <motion.article
+      className="book-card"
+      initial={false}
+      whileHover={reducedMotion ? undefined : { y: -5 }}
+      transition={{ duration: 0.2 }}
+    >
       <Link
         href={`/books/${book._id}`}
         className="book-art"
@@ -35,6 +42,6 @@ export function BookCard({ book }: { book: Book }) {
           View Details <ArrowUpRight size={16} />
         </Link>
       </div>
-    </article>
+    </motion.article>
   );
 }

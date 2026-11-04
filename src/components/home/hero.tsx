@@ -51,7 +51,7 @@ const slides = [
 ];
 export function Hero() {
   return (
-    <section className="hero-section container" aria-label="Discover Pataghor">
+    <section className="hero-section container" aria-label="Discover BookNook">
       <Swiper
         modules={[A11y, Pagination, Navigation, Keyboard]}
         slidesPerView={1}

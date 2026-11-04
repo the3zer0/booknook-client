@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -7,8 +7,8 @@ export function Footer() {
         <div className="footer-top">
           <div>
             <Link href="/" className="brand">
-              <BookOpen size={24} />
-              Pataghor.
+              <img src="/booknook-logo.svg" alt="" width={36} height={36} />
+              BookNook
             </Link>
             <p>
               A little space for your next chapter.
@@ -45,8 +45,8 @@ export function Footer() {
               GitHub <ArrowUpRight size={14} />
             </a>
             <a
-              href="https://twitter.com/intent/tweet?text=Explore%20Pataghor%2C%20a%20community%20lending%20library"
-              aria-label="Share Pataghor on X"
+              href="https://twitter.com/intent/tweet?text=Explore%20BookNook%2C%20a%20community%20lending%20library"
+              aria-label="Share BookNook on X"
               target="_blank"
               rel="noreferrer"
             >
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
         <div className="footer-bottom">
           <span>
-            © {new Date().getFullYear()} Pataghor. All rights reserved.
+            © {new Date().getFullYear()} BookNook. All rights reserved.
           </span>
           <span>Good books deserve to be shared.</span>
         </div>

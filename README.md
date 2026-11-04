@@ -1,6 +1,6 @@
-# Pataghor
+# BookNook
 
-Pataghor is a community lending library built with Next.js App Router, TypeScript, DaisyUI, BetterAuth and MongoDB.
+BookNook is a community lending library built with Next.js App Router, TypeScript, DaisyUI, BetterAuth and MongoDB.
 
 - Discover the latest six additions or browse all books by category, title and author.
 - Register with email, sign in and resume the book page you originally opened.
@@ -13,12 +13,12 @@ Pataghor is a community lending library built with Next.js App Router, TypeScrip
 
 Clone the client and server into sibling folders named booknook-client and booknook-server. Use Node 22 or later and run npm ci in both folders. In the server folder, run npm run db:local and leave it running. It creates the database configuration and a random local auth secret on first use. In another server terminal run npm run seed once, then npm start. In the client folder run npm run dev.
 
-Open [Pataghor locally](http://localhost:3000). The public deployment URL is pending.
+Open [BookNook locally](http://localhost:3000). The public deployment URL is pending.
 
 [Server repository](https://github.com/the3zer0/booknook-server) · [Project handoff](HANDOFF.md)
 
 ## Configuration and deployment
 
-The stack includes Next.js 16, React 19, TypeScript, Tailwind CSS 4, DaisyUI, Better Auth, MongoDB, Swiper and Sonner. Local development reads .env.local. See .env.example for variable names. Run npm run typecheck and npm run build to verify the client.
+The stack includes Next.js 16, React 19, TypeScript, Tailwind CSS 4, DaisyUI, Better Auth, MongoDB, Swiper, Framer Motion and Sonner. Local development reads .env.local. See .env.example for variable names. Run npm run typecheck and npm run build to verify the client.
 
 [Architecture](docs/ARCHITECTURE.md) · [Assignment checklist](docs/ASSIGNMENT_CHECKLIST.md) · [Production deployment and environment setup](docs/DEPLOYMENT.md)

@@ -68,6 +68,20 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          {!isPending && !session && (
+            <div className="mobile-auth-links">
+              <Link href="/login" onClick={() => setMenu(false)}>
+                Login
+              </Link>
+              <Link
+                className="btn btn-primary btn-sm"
+                href="/register"
+                onClick={() => setMenu(false)}
+              >
+                Register <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          )}
         </nav>
         <div className="header-actions">
           <button
@@ -105,10 +119,10 @@ export function Header() {
             </details>
           ) : (
             <>
-              <Link className="login-link" href="/login">
+              <Link className="login-link desktop-auth-link" href="/login">
                 Login
               </Link>
-              <Link className="btn btn-primary btn-sm" href="/register">
+              <Link className="btn btn-primary btn-sm desktop-auth-link" href="/register">
                 Register <span aria-hidden="true">↗</span>
               </Link>
             </>

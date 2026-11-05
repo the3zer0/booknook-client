@@ -1589,6 +1589,9 @@ h2,
   font-size: 13px;
   gap: 24px;
 }
+.mobile-auth-links {
+  display: none;
+}
 .main-nav a,
 .main-nav a.active {
   color: #fff8e5;
@@ -2541,6 +2544,32 @@ h2,
   .header-actions > .btn-primary {
     padding-inline: 8px;
     white-space: nowrap;
+  }
+
+  .header-actions > .desktop-auth-link {
+    display: none;
+  }
+
+  .main-nav.is-open {
+    gap: 4px;
+    padding: 12px 18px 18px;
+  }
+
+  .main-nav.is-open > a {
+    padding: 12px 10px;
+    border-bottom: 1px solid #d9b96722;
+  }
+
+  .mobile-auth-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 10px 2px;
+  }
+
+  .mobile-auth-links > a:first-child {
+    flex: 1;
+    padding: 10px 0;
   }
 }
 

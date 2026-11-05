@@ -1,24 +1,54 @@
 # BookNook
 
-BookNook is a community lending library built with Next.js App Router, TypeScript, DaisyUI, BetterAuth and MongoDB.
+### Your community bookshelf
 
-- Discover the latest six additions or browse all books by category, title and author.
-- Register with email, sign in and resume the book page you originally opened.
-- Share books with covers and manage titles, descriptions and copy counts on your own shelf.
-- Borrow available books for seven days and see their due dates in My Borrows.
-- Return a book to release its copy for another reader.
-- Switch between light and dark themes on desktop and mobile.
+A small online library for discovering stories, sharing books and passing each read to another person. BookNook pairs a calm, book-inspired interface with a full lending workflow.
+
+[**Open the live library →**](https://booknook-client-os8h.vercel.app/) · [Server API](https://booknook-api-8xuw.onrender.com) · [Server repository](https://github.com/the3zer0/booknook-server)
+
+---
+
+## The reading experience
+
+- Browse a responsive catalog by title, author or category, with the six newest books featured on the home page.
+- Sign in with email or Google and return to the page you originally wanted to visit.
+- Add books with uploaded covers, then edit and manage your own shelf.
+- Borrow an available copy for seven days, track its due date and return it when you finish.
+- Keep book availability accurate and prevent duplicate active borrows.
+- Switch between light and dark themes on phone, tablet and desktop.
+
+## Built with
+
+Next.js App Router · React · TypeScript · Tailwind CSS · DaisyUI · Better Auth · MongoDB · Express · Swiper · Framer Motion
 
 ## Run locally
 
-Clone the client and server into sibling folders named booknook-client and booknook-server. Use Node 22 or later and run npm ci in both folders. In the server folder, run npm run db:local and leave it running. It creates the database configuration and a random local auth secret on first use. In another server terminal run npm run seed once, then npm start. In the client folder run npm run dev.
+Use Node.js 22 or later. Clone the client and server repositories into sibling folders named `booknook-client` and `booknook-server`, then install each repository's locked dependencies with `npm ci`.
 
-Open [BookNook locally](http://localhost:3000). Live website: [BookNook](https://booknook-client-os8h.vercel.app).
+Start the local MongoDB replica set from the server folder:
 
-[Server repository](https://github.com/the3zer0/booknook-server)
+```bash
+npm run db:local
+```
 
-## Configuration and deployment
+In a second server terminal, seed the sample catalog once and start the API:
 
-The stack includes Next.js 16, React 19, TypeScript, Tailwind CSS 4, DaisyUI, Better Auth, MongoDB, Swiper, Framer Motion and Sonner. Local development reads .env.local. See .env.example for variable names. Run npm run typecheck and npm run build to verify the client.
+```bash
+npm run seed
+npm start
+```
 
-[Production deployment and environment setup](docs/DEPLOYMENT.md)
+Configure the client using the names in `.env.example`, then start Next.js:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). Keep credentials in local environment files or your hosting provider's secret settings; never commit them.
+
+## Project links
+
+- [Client source](https://github.com/the3zer0/booknook-client)
+- [Express API source](https://github.com/the3zer0/booknook-server)
+- [Live website](https://booknook-client-os8h.vercel.app/)
+- [Deployment guide](docs/DEPLOYMENT.md)

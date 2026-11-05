@@ -2536,6 +2536,29 @@ h2,
     padding: 0;
   }
 
+  .header-actions > .mobile-toggle {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    min-height: 42px;
+    border: 1px solid #f2ce78;
+    border-radius: 12px;
+    background: #f2ce78;
+    color: #002d25;
+    box-shadow: 0 3px 12px #001a1544;
+  }
+
+  .header-actions > .mobile-toggle:hover {
+    background: #ffe3a0;
+    color: #002d25;
+  }
+
+  .header-actions > .mobile-toggle svg {
+    width: 21px;
+    height: 21px;
+    stroke-width: 2.5;
+  }
+
   .header-actions .login-link {
     font-size: 11px;
     white-space: nowrap;

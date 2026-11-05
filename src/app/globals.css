@@ -2501,3 +2501,65 @@ h2,
     gap: 10px;
   }
 }
+
+/* Keep the compact mobile header legible without crowding its actions. */
+@media (max-width: 580px) {
+  .header-inner {
+    gap: 6px;
+  }
+
+  .header-inner .brand {
+    gap: 6px;
+    font-size: 18px;
+    letter-spacing: -0.45px;
+  }
+
+  .header-inner .brand img {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-actions > .btn-circle:not(.mobile-toggle),
+  .header-actions > .mobile-toggle {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+    padding: 0;
+  }
+
+  .header-actions .login-link {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .header-actions > .btn-primary {
+    padding-inline: 8px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-inner {
+    gap: 4px;
+  }
+
+  .header-inner .brand {
+    gap: 5px;
+    font-size: 17px;
+  }
+
+  .header-inner .brand img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+}

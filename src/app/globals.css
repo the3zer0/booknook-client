@@ -2592,3 +2592,34 @@ h2,
     gap: 4px;
   }
 }
+
+@media (max-width: 800px) {
+  .main-nav.is-open {
+    background: #002d25;
+    color: #fff8e5;
+    border: 1px solid #d9b96744;
+    border-top: 0;
+    box-shadow: 0 16px 30px #001a1555;
+  }
+
+  .main-nav.is-open > a,
+  .main-nav.is-open > a.active {
+    color: #fff8e5;
+    border-color: #d9b96733;
+  }
+
+  .main-nav.is-open > a:hover,
+  .main-nav.is-open > a.active {
+    color: #f2ce78;
+  }
+
+  .main-nav.is-open .mobile-auth-links > a:first-child {
+    color: #fff8e5;
+  }
+
+  .main-nav.is-open .mobile-auth-links > .btn-primary {
+    background: #f2ce78;
+    border-color: #f2ce78;
+    color: #172b22;
+  }
+}
